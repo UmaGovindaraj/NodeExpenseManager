@@ -1,12 +1,14 @@
 FROM node:10-alpine
 
-WORKDIR /app
+RUN mkdir -p /src
 
-COPY package.json /app/package.json
+WORKDIR /src
+
+COPY package.json /src/package.json
 
 RUN npm install
 
-COPY . /app
+COPY . /src
 
 EXPOSE 3000
 

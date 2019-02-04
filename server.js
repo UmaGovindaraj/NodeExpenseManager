@@ -32,6 +32,8 @@ app.use(function (req, res, next) {
 
 // Configuring the database
 const dbConfig = require('./config/database.config.js');
+
+/*
 const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
@@ -45,7 +47,7 @@ mongoose.connect(dbConfig.url, {
     console.log('Could not connect to the database. Exiting now...', err);
     process.exit();
 });
-
+*/
 // define a simple route
 app.get('/', (req, res) => {
     res.json({"message": "Welcome to expense management !! Organize and keep track of all your expenses easily."});
